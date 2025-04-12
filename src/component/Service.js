@@ -5,29 +5,26 @@ const Service = () => {
   const services = [
     {
       id: "02",
-      title: "VISUAL DESIGN",
-      description:
-        "Blend of artistic intuition with strategic insight to craft a visual identity.",
+      title: "FULL STACK DEVELOPMENT",
+      description: "End-to-end web development, both frontend and backend using modern technologies."
     },
     {
       id: "01",
-      title: "BRAND IDENTITY DESIGN",
-      description:
-        "Blend of strategic thinking and creative flair to craft a digital identity that resonates and captivates. kits you need to create a true website within minutes.",
+      title: "MERN ECOMMERCE STORE",
+      description: "Custom eCommerce solutions built with MongoDB, Express, React, and Node.js for seamless shopping experiences."
     },
     {
       id: "03",
-      title: "UX RESEARCH",
-      description:
-        "Blend of functionality with aesthetics to create delightful experience.",
+      title: "FRONT-END DEVELOPMENT",
+      description: "Designing and building responsive, user-friendly interfaces using the latest frontend frameworks."
     },
     {
       id: "04",
-      title: "ART DIRECTION",
-      description:
-        "Blend of strategic thinking and artistic finesse to craft a visual identity that goes beyond aesthetics.",
-    },
-  ];
+      title: "WEBSITE ON REACT",
+      description: "Creating dynamic and high-performance websites using React to deliver a smooth user experience."
+    }
+  ];  
+  
   return (
     <div className="bg-[#F4F3ED] min-h-screen w-full py-12 px-4 md:px-8 lg:px-24">
       <h1 className="text-6xl md:text-7xl font-bold mb-16 md:mb-20">
