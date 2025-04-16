@@ -1,41 +1,46 @@
 import { ArrowDown } from "lucide-react";
-import img1 from "../asserts/branding.jpg"
-import img2 from "../asserts/mockup.jpg"
-import img3 from "../asserts/video.jpg"
-import img4 from "../asserts/branding.jpg"
-import img5 from "../asserts/mockup2.jpg"
+import img1 from "../asserts/branding.jpg";
+import img2 from "../asserts/mockup.jpg";
+import img3 from "../asserts/video.jpg";
+import img4 from "../asserts/branding.jpg";
+import img5 from "../asserts/mockup2.jpg";
 
 const Work = () => {
   const projects = [
     {
       id: 1,
       image: img1,
-      tag: "BRANDING",
+      tag: "MERN Ecommerce 24",
       className: "col-span-1 md:col-span-2 row-span-1",
+      link: "https://mern-ecommerce-frontend-smoky.vercel.app/",
     },
     {
       id: 2,
       image: img2,
-      tag: "MOCKUP",
+      tag: "Comando Fitness Club",
       className: "col-span-1 md:col-span-2 row-span-1",
+      link: "https://xtreme-fitness-ruby.vercel.app/",
     },
     {
       id: 3,
       image: img3,
-      tag: "VIDEO",
-      className: "col-span-1 row-span-1 w-[400px]",
+      tag: "Voting App",
+      className: "col-span-1 row-span-1 w-full md:w-[400px]",
+      link: "https://voting-app-76441.web.app/",
     },
     {
       id: 4,
       image: img4,
-      tag: "BRANDING",
-      className: "col-span-1 row-span-1 ml-24 w-[400px]",
+      tag: "Admin Dashboard",
+      className: "col-span-1 row-span-1 w-full md:w-[400px] md:ml-24",
+      link: "https://admin-dashboard-eight-ruby.vercel.app/",
     },
     {
       id: 5,
       image: img5,
-      tag: "MOCKUP",
-      className: "col-span-1 row-span-1 ml-48 w-[400px]",
+      tag: "AI Chatbot",
+      className: "col-span-1 row-span-1 w-full md:w-[400px] md:ml-48",
+      link: "https://ai-chatbot-917d5.web.app/",
     },
   ];
 
@@ -53,14 +58,17 @@ const Work = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-min">
           {projects.map((project) => (
-            <div
+            <a
               key={project.id}
-              className={`relative group overflow-hidden rounded-lg ${project.className}`}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`relative group overflow-hidden rounded-lg block ${project.className}`}
             >
               <div className="relative aspect-[4/3] w-full">
                 <img
                   src={project.image || "/placeholder.svg"}
-                  alt="Project thumbnail"
+                  alt={project.tag}
                   className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105 rounded-lg"
                 />
                 <div className="absolute top-4 right-4">
@@ -68,8 +76,13 @@ const Work = () => {
                     {project.tag}
                   </span>
                 </div>
+                <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="bg-white text-black px-4 py-2 rounded-full text-sm font-medium">
+                    View Project
+                  </span>
+                </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
